@@ -126,3 +126,8 @@ The endpoints for the Registration API are as follows:
   
      This is the endpoint for getting the sensors belonging to a user.
 
+
+
+This project can be found on Hackster.io at the following URL:
+
+https://www.hackster.io/aryamirshafii/beagle-binary-cloud-solution-8ecb80

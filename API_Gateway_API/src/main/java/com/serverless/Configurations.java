@@ -1,7 +1,7 @@
 package com.serverless;
 
 public class Configurations {
-    public static final String accessKey = "AKIA6EQ3BDYM75X4GTYD";
-    public static final String secretKey = "nQ/DSHnl6HiEcqFtztmRqO8e4TaUwsMHeZtTnLca";
+    public static final String accessKey = "YOUR_ACCESS_KEY_HERE";
+    public static final String secretKey = "YOUR_SECRET_KEY_HERE";
 }
 

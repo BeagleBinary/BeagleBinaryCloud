@@ -1,0 +1,17 @@
+amazon:
+  access:
+    key: YOUR_AWS_KEY
+    secret-key: YOUR_AWS_SECRET_KEY
+  region: us-east-1
+  end-point:
+    url: dynamodb.us-east-1.amazonaws.com
+
+  server:
+    port: 5000
+
+logging:
+  level:
+    web=TRACE:
+    org:
+      springframework:
+        web=TRACE:

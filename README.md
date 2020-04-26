@@ -14,7 +14,7 @@
 
 ## Cloud Architecture
 
-![Overall Architecture](https://github.gatech.edu/amirshafii3/BeagleBinary/blob/master/Cloud/Images/Cloud%20Architecture.png)
+![Overall Architecture](https://github.com/BeagleBinary/BeagleBinaryCloud/blob/master/Images/Cloud%20Architecture.png)
 
 The cloud solution consists of two components: The Registration API, and the Data Collection API.
 
@@ -24,7 +24,7 @@ The the cloud stores data for three types: Users, Sensors, and Sensor Data. User
 
 ### Registration API
 
-![Registration API](https://github.gatech.edu/amirshafii3/BeagleBinary/blob/master/Cloud/Images/Registration%20API.png)
+![Registration API](https://github.com/BeagleBinary/BeagleBinaryCloud/blob/master/Images/Registration%20API.png)
 
 The registration API handles CRUD (Create, read, update and delete) operations for Users and Sensors, as well as allowing for the querying of sensor data for any given sensor. This API is hosted using the Serverless framework along with AWS API Gateway and operates under the HTTP protocol. 
 
@@ -41,7 +41,7 @@ This is where the idea of Serverless comes from. There is not one monolith appli
 
 
 ### Data Collection API
-![Data Collection API](https://github.gatech.edu/amirshafii3/BeagleBinary/blob/master/Cloud/Images/Data%20Creation%20API.png)
+![Data Collection API](https://github.com/BeagleBinary/BeagleBinaryCloud/blob/master/Images/Data%20Creation%20API.png)
 
 The Data Collection API serves to collect data from any given sensor. It can only collect numerical data and it is not able to do any CRUD operations. 
 
@@ -76,49 +76,53 @@ Wrote data value, 1.0 for sensor: 58ef016b-9889-42f9-b6e2-78db9a86ac97
 
 The endpoints for the Registration API are as follows:
   #### Sensors
-  POST https://55k9v8ozca.execute-api.us-east-1.amazonaws.com/dev/sensors
+  POST https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/sensors
   
      This is the endpoint for creating a sensor.
      
-  DELETE https://55k9v8ozca.execute-api.us-east-1.amazonaws.com/dev/sensors/{id}
+  DELETE https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/sensors/{id}
   
      This is the endpoint for deleing a sensor.
      
-  GET https://55k9v8ozca.execute-api.us-east-1.amazonaws.com/dev/sensors/{id}
+  GET https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/sensors/{id}
   
      This is the endpoint for getting a specific sensor.
      
-  GET https://55k9v8ozca.execute-api.us-east-1.amazonaws.com/dev/sensors
+  GET https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/sensors
   
      This is the endpoint for getting all sensors.
   
   #### Sensor Data Querying
-  DELETE https://55k9v8ozca.execute-api.us-east-1.amazonaws.com/dev/data/{id}
+  DELETE https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/data/{id}
   
      This is this is the endpoint to delete a specific sensor data. This is only for testing and should never be used.
      
-  GET https://55k9v8ozca.execute-api.us-east-1.amazonaws.com/dev/data/{id}
+  GET https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/data/{id}
   
      This is the endpoint for retrieving a specific sensor data object.
      
-  GET https://55k9v8ozca.execute-api.us-east-1.amazonaws.com/dev/data/bySensor/{sensorId}
+  GET https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/data/bySensor/{sensorId}
   
      This is the endpoint for getting data for querying all sensor data for a specific sensor.
   
   #### User
-  POST https://55k9v8ozca.execute-api.us-east-1.amazonaws.com/dev/users
+  POST https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/users
   
      This is the endpoint for creating a user.
      
-  DELETE https://55k9v8ozca.execute-api.us-east-1.amazonaws.com/dev/users/{id}
+  DELETE https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/users/{id}
   
      This is the endpoint for deleting a user.
      
-  GET https://55k9v8ozca.execute-api.us-east-1.amazonaws.com/dev/users/{id}
+  GET https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/users/{id}
   
      This is the endpoint for getting a user.
      
-  GET https://55k9v8ozca.execute-api.us-east-1.amazonaws.com/dev/users
+  GET https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/users
   
      This is the endpoint for getting all users.
+     
+  GET https://5b1pxqwa2e.execute-api.us-east-1.amazonaws.com/dev/user/getSensors/{USERID}
+  
+     This is the endpoint for getting the sensors belonging to a user.
 
